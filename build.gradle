@@ -2,8 +2,10 @@
 apply from: "config.gradle"
 buildscript {
     repositories {
-        google()
+        maven { url 'https://maven.aliyun.com/repository/google/' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter/' }
         jcenter()
+        google()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.3.2'
@@ -18,9 +20,11 @@ buildscript {
 
 allprojects {
     repositories {
-        google()
+        maven { url 'https://maven.aliyun.com/repository/google/' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter/' }
         jcenter()
         maven { url 'https://jitpack.io' }
+        google()
     }
 }
 
